@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Smart connect</div>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="submission.html">Submission</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <p>Send us your message and we will get back to you soon.</p>
+
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Full Name">
+
+                <input type="email" id="email" placeholder="Email Address">
+
+                <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+
+                <button type="submit">Submit Message</button>
+            </form>
+
+            <p id="successMsg"></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

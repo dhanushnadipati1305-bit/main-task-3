@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submissions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Smart connect</div>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="submissions.html">Submissions</a></li>
+        </ul>
+    </nav>
+
+    <div class="submission-page">
+
+        <h1>Saved Submissions</h1>
+
+        <div id="submissionsContainer"></div>
+
+    </div>
+
+<script>
+
+const submissions =
+JSON.parse(localStorage.getItem("contacts")) || [];
+
+const container =
+document.getElementById("submissionsContainer");
+
+if(submissions.length === 0){
+
+    container.innerHTML =
+    `<div class="card">
+        <h3>No Submissions Found</h3>
+    </div>`;
+
+}
+else{
+
+    submissions.forEach((item,index)=>{
+
+        container.innerHTML += `
+        <div class="card">
+            <h3>Submission ${index+1}</h3>
+
+            <p><strong>Name:</strong> ${item.name}</p>
+
+            <p><strong>Email:</strong> ${item.email}</p>
+
+            <p><strong>Message:</strong> ${item.message}</p>
+        </div>
+        `;
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
